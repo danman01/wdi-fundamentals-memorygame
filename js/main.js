@@ -4,25 +4,25 @@ console.log("Up and running!");
 var card = [{
         rank: "queen",
         suit: "hearts",
-        cardImage: "/images/queen-of-hearts.png"
+        cardImage: "images/queen-of-hearts.png"
     },
 
     {
         rank: "queen",
         suit: "diamonds",
-        cardImage: "/images/queen-of-diamonds.png"
+        cardImage: "images/queen-of-diamonds.png"
     },
 
     {
         rank: "king",
         suit: "hearts",
-        cardImage: "/images/king-of-hearts.png"
+        cardImage: "images/king-of-hearts.png"
     },
 
     {
         rank: "king",
         suit: "diamonds",
-        cardImage: "/images/king-of-diamonds.png"
+        cardImage: "images/king-of-diamonds.png"
     }
 ];
 
@@ -52,10 +52,11 @@ var flipCard = function () {
 var createBoard = function() {
     for (var i = 0; i < card.length; i++){
         var cardElement = document.createElement('img');
-        cardElement.setAttribute('cardImage', '/images/back.png');
+        cardElement.setAttribute('src', 'images/back.png');
         cardElement.setAttribute('data-id', i);
         cardElement.addEventListener('click', flipCard);
-        document.getElementById('game-board').appendChild(cardElement);
+        var board = document.getElementById('game-board');
+        board.appendChild(cardElement);
     }
 };
 createBoard();
