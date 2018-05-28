@@ -9,10 +9,13 @@
         text-decoration: none;
         text-transform: uppercase;
     }
-        a:hover {
-            /* Your styles here */
-            border-color: white;
-            }
+    a:hover {
+        /* Your styles here */
+        border-color: white;
+    }
+    board{
+        width: 850px;
+    }
     body {
         text-align: center;
         margin: 0;
@@ -91,6 +94,6 @@
     }
     .name {
         color: #F15B31;
-        font-weght: 700;
+        font-weight: 700;
 
     }
