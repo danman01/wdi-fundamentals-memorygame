@@ -1,0 +1,39 @@
+.card {
+    background-image: url('../images/back.png');
+    background-size: cover;
+    /*border: solid 1px #aaa;
+    border-radius: 9px;
+    width: 95px;
+    height: 150px;
+    float: left;
+    background-color: white;*/
+    padding: 3px 3px 3px 3px;
+    margin: 3px 3px;
+    width: 80px;
+    height: 132px;
+    float: left;
+}
+
+.card .value {
+    font-size: 15pt;
+    font-family: sans-serif;
+}
+
+.card .suit {
+    background-image: url('../images/suits.png');
+    height: 100px;
+    width: 90px;
+}
+
+.card .diamonds {
+    background-position-y: 100px;
+}
+
+.card .hearts {
+    background-position-x: 90px;
+}
+
+.card .clubs {
+    background-position-x: 90px;
+    background-position-y: 100px;
+}
