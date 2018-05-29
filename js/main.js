@@ -43,27 +43,6 @@ function shuffle() {
     }
 }
 
-// function getCardUI(card) {
-//     var el = document.createElement('div');
-//     var icon = '';
-//     if (card.Suit == 'Hearts')
-//         icon = '&hearts;';
-//     else if (card.Suit == 'Spades')
-//         icon = '&spades;';
-//     else if (card.Suit == 'Diamonds')
-//         icon = '&diamonds;';
-//     else
-//         icon = '&clubs;';
-//     el.addEventListener('click', flipCard);
-//     el.innerHTML = card.Value + '' + icon;
-//     var board = document.getElementById('game-board');
-//     board.appendChild(el);
-//     el.className = 'card2';
-//     el.innerHTML = card.Value + '' + icon;
-//     return el;
-// }
-
-
 //put the deck onto the page 
 function renderDeck() {
     for (var i = 0; i < deck.length; i++) {
@@ -73,7 +52,6 @@ function renderDeck() {
         document.getElementById("game-board").appendChild(card);
     }
 }
-
 
 // needs to be update. check to see if the two cards are a match
 var checkForMatch = function () {
@@ -100,6 +78,5 @@ var createBoard = function () {
     renderDeck();
 
 };
-
 // add listener to the shuffle button which will then call createBoard()
 document.getElementsByTagName('button')[0].addEventListener('click', createBoard);
