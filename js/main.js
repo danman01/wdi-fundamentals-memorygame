@@ -2,7 +2,10 @@
 var deck = [];
 var suits = ["spades", "diamonds", "clubs", "hearts"];
 var values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+var cardsInPlay = [];
 
+//generate a deck of 52 playing cards with suits and ranks. 
+//this deck will be in a non-random order
 function getDeck() {
     //var deck = [];
 
@@ -26,6 +29,7 @@ function deal() {
     return card;
 }
 
+// shuffle the deck. take two random positions in the deck and swap them 1000 times
 function shuffle() {
     // for 1000 turns
     // switch the values of two random cards
@@ -59,6 +63,8 @@ function shuffle() {
 //     return el;
 // }
 
+
+//put the deck onto the page 
 function renderDeck() {
     for (var i = 0; i < deck.length; i++) {
         var card = document.createElement("div");
@@ -68,8 +74,8 @@ function renderDeck() {
     }
 }
 
-var cardsInPlay = [];
 
+// needs to be update. check to see if the two cards are a match
 var checkForMatch = function () {
 
     if (cardsInPlay.length === 2) {
@@ -81,11 +87,13 @@ var checkForMatch = function () {
     }
 };
 
+// once a card is clicked, flip over to the face value of the card
 var flipCard = function () {
     //this.setAttribute('src', '');
     checkForMatch();
 };
 
+// generate the playing area on the page
 var createBoard = function () {
     getDeck();
     shuffle();
@@ -93,4 +101,5 @@ var createBoard = function () {
 
 };
 
+// add listener to the shuffle button which will then call createBoard()
 document.getElementsByTagName('button')[0].addEventListener('click', createBoard);
