@@ -9,17 +9,21 @@
         text-decoration: none;
         text-transform: uppercase;
     }
+
     a:hover {
         /* Your styles here */
         border-color: white;
     }
-    board{
+
+    board {
         width: 850px;
     }
+
     body {
         text-align: center;
         margin: 0;
     }
+
     footer {
         background-color: #0D2C40;
         color: white;
@@ -28,8 +32,8 @@
         letter-spacing: .08em;
         padding: 0 20px;
         text-transform: uppercase;
-
     }
+
     h1 {
         /*color: #0D2C40; */
         font-family: "Raleway", sans-serif;
@@ -76,6 +80,7 @@
         font-size: 18px;
         line-height: 26px
     }
+
     .clearfix:after {
         visibility: hidden;
         display: block;
@@ -83,17 +88,19 @@
         clear: both;
         height: 0;
         font-size: 0;
-        }
+    }
+
     .copyright {
         float: left;
         font-family: "Raleway", sans-serif;
     }
+
     .message {
         float: right;
         font-family: "Raleway", sans-serif;
     }
+
     .name {
         color: #F15B31;
         font-weight: 700;
-
     }
