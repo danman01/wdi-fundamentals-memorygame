@@ -32,9 +32,9 @@ var checkForMatch = function () {
 
     if (cardsInPlay.length === 2) {
         if (cardsInPlay[0] === cardsInPlay[1]) {
-            alert("You found a match");
+            console.log("You found a match");
         } else {
-            alert("Sorry, try again.");
+            console.log("Sorry, try again.");
         }
     }
 };
@@ -43,6 +43,7 @@ var flipCard = function () {
     var cardId = this.getAttribute('data-id');
     cardsInPlay.push(card[cardId].rank);
     this.setAttribute('src', card[cardId].cardImage);
+    console.log("changed card image")
     checkForMatch();
     // console.log(card[cardId].suit);
     // console.log(card[cardId].cardImage);
@@ -60,4 +61,3 @@ var createBoard = function() {
     }
 };
 createBoard();
-
